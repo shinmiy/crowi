@@ -68,7 +68,6 @@ module.exports = function(crowi) {
     params.ContentType = contentType
     params.Key = filePath
     params.Body = fileStream
-    params.ACL = 'public-read'
 
     return new Promise(function(resolve, reject) {
       s3.putObject(params, function(err, data) {
